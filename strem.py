@@ -4,36 +4,9 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-"""cap=cv2.VideoCapture(0)
-st.title("this is opencv")
-f_p=st.empty()
-s_b_p=st.button("Stop")
-while cap.isOpened() and not s_b_p:
-    ret,fr=cap.read()
-    if not ret:
-        st.write("The video capture has ended.")
-        break
-    fr=cv2.cvtColor(fr, cv2.COLOR_BGR2RGB)
-    f_p.image(fr, channels="RGB")
-    if cv2.waitKey(1) & 0xFF == ord("q") or s_b_p:
-        break
-cap.release()
-cv2.destroyAllWindows()"""
-"""# To read image from disk, we use 
-# cv2.imread function, in below method, 
-img = cv2.imread("image.jpg", cv2.IMREAD_COLOR)
-st.image(img)
- 
+
 # waitKey() waits for a key press to close the window and 0 specifies indefinite loop
 # cv2.destroyAllWindows() simply destroys all the windows we created.
-
-print(4+5)
-
-print(img)
-kpil_txt=st.markdown("0")
-kpil_txt.write(f'<h1>{img}</h1>')
-print(type(img))"""
-
 image1 = cv2.imread('truss.jpg', 0) 
 image1 = ~image1
 plt.imshow(image1, cmap='gray')
